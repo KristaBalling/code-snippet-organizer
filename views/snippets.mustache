@@ -1,0 +1,81 @@
+
+
+
+{{#currentUser}}
+Hello, {{name}}
+{{/currentUser}}
+
+{{^currentUser}}
+Please Log In or Sign Up
+
+
+
+<form id="log" action="/login" method="post">
+    <input type="text" name="username">
+    <label for="username"> Username </label>
+
+    <input type="text"  name="password">
+    <label for="password" name="password"> Password </label>
+
+    <input type="submit" name="Login">
+  </form>
+
+    <h1>Register for an account below</h1>
+
+<form class="register" action="/registerNew" method="post">
+    <input class="register" type="text" name="username">
+    <label for="username"> Username </input>
+
+    <input class="register" type="text" name="email">
+    <label for="email"> Email </input>
+
+    <input class="register" type="text" name="password">
+    <label for="password"> Password </input>
+    
+    <button class="register type="submit"> Register </button>
+
+  </form>
+  {{/currentUser}}
+
+  <h2>{{message}}</h2>
+
+
+<h2>Code Snippet Organizer</h2>
+
+<form method="post" action="/snippets"><select name="select"> Refine your search<id="selectbox">
+  <option value="By Language">Language</option> 
+  <option value="By Tag">Tag</option>
+</select>
+<input type="search" method="post" action="./snippets">
+<button id="submit_button"> Search </button></form>
+
+{{#Display}}
+<p>{{title}} (Language: {{language}})</p>
+<p>{{codeBody}}</P>
+<p>{{optionalNotes}}</p>
+<p>:{{tags}}</p>
+</form>
+{{/Display}}
+
+
+
+
+<form method="post" action="/snippets">
+<p>Title:</p>
+<input type="text" name="title"></input>
+<p>Language:</p>
+<input type="text" name="language"></input>
+<p>Enter your code below:</p>
+<textarea id="code_input"  name="code" class="wmd-input processed" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+<p>Notes:</p>
+<input type="text" name="notes" ></input>
+<p>Tags:</p>
+<input type="text" name="tags"></input>
+<button id="text_button"> Submit </button>
+</form>
+
+
+
+<form method="post" action="/logout">
+<input type="submit" name="logout_btn" value="logout">
+</form>

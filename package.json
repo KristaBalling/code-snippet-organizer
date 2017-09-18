@@ -1,0 +1,22 @@
+{
+  "name": "weeksixproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "jest": "^21.1.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.11.10",
+    "mustache-express": "^1.2.5",
+    "passport": "^0.4.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
